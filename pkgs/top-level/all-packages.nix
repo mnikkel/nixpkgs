@@ -2032,6 +2032,8 @@ with pkgs;
 
   sdkmanager = with python3Packages; toPythonApplication sdkmanager;
 
+  seventeenlands = callPackage ../tools/games/seventeenlands { };
+
   sgrep = callPackage ../tools/text/sgrep { };
 
   shaperglot = with python3Packages; toPythonApplication shaperglot;
