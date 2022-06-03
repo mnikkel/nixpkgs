@@ -57,7 +57,10 @@ let
         services.cfssl.enable = true;
         systemd.services.cfssl.after = [ "cfssl-init.service" "networking.target" ];
 
-        systemd.tmpfiles.rules = [ "d /var/ssl 777 root root" ];
+        systemd.tmpfiles.rules = [
+          "d ${config.services.cfssl.dataDir} 777 root root" 
+          "d /var/ssl 777 root root"
+        ];
 
         systemd.services.cfssl-init = {
           description = "Initialize the cfssl CA";
