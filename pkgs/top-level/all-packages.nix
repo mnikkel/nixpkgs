@@ -10822,6 +10822,8 @@ with pkgs;
 
   mtdutils = callPackage ../tools/filesystems/mtdutils { };
 
+  mtga-tracker-daemon = callPackage ../tools/games/mtga-tracker-daemon { };
+
   mtools = callPackage ../tools/filesystems/mtools { };
 
   mtr = callPackage ../tools/networking/mtr { };
