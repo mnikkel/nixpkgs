@@ -7,7 +7,7 @@
 
 buildDotnetModule rec {
   pname = "mtga-tracker-daemon";
-  version = "1.0.6.1";
+  version = "1.0.7.2";
 
   patches = [ ./rules.patch ];
 
@@ -29,7 +29,7 @@ buildDotnetModule rec {
     owner = "frcaton";
     repo = "mtga-tracker-daemon";
     rev = version;
-    hash = "sha256-0z1roAlw4K3LG45WvkAOnperXpcicwAZrtpqdrJUSE0=";
+    hash = "sha256-vL1coJX8+b5cJsxMf9IC0Myg2U5RH4X7UTtmuRMM0gU=";
   };
 
 
