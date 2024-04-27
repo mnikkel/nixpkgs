@@ -30,23 +30,12 @@ let
 in
 stdenv.mkDerivation rec {
   pname = "alsa-utils";
-  version = "1.2.10";
+  version = "1.2.11";
 
   src = fetchurl {
     url = "mirror://alsa/utils/${pname}-${version}.tar.bz2";
-    sha256 = "sha256-EEti7H8Cp84WynefSBVhbfHMIZM1A3g6kQe1lE+DBjo=";
+    sha256 = "sha256-msbKOog/FR5Wjc+Xm40uXL7MUbgZuw5ruKLps0zEKKc=";
   };
-  patches = [
-    # Backport fixes for musl libc. Remove on next release
-    (fetchpatch {
-      url = "https://github.com/alsa-project/alsa-utils/commit/8c229270f6bae83b705a03714c46067a7aa57b02.patch";
-      hash = "sha256-sUaBHY8EHf4805nF6tyNV5jYXcJf3O+r04VXFu4dUCE=";
-    })
-    (fetchpatch {
-      url = "https://github.com/alsa-project/alsa-utils/commit/0925ad7f09b2dc77015784f9ac2f5e34dd0dd5c3.patch";
-      hash = "sha256-bgGU9On82AUbOjo+KN6WfuhqUAWM87OHnKN7plpG284=";
-    })
-  ];
 
   nativeBuildInputs = [ gettext makeWrapper ];
   buildInputs = [ alsa-lib ncurses libsamplerate fftw ];
