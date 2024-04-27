@@ -13,14 +13,14 @@
 
 stdenv.mkDerivation rec {
   pname = "lynx";
-  version = "2.9.0dev.12";
+  version = "2.9.1";
 
   src = fetchurl {
     urls = [
       "ftp://ftp.invisible-island.net/lynx/tarballs/lynx${version}.tar.bz2"
       "https://invisible-mirror.net/archives/lynx/tarballs/lynx${version}.tar.bz2"
     ];
-    hash = "sha256-pkVbFZ0Ad22OwQUShcly3B8MVS0FcaDP8Coj7BRu6OU=";
+    hash = "sha256-ptubIsIN9DXfN1eSWlBVMc6aUU0TR0LpNdcapcQTOcU=";
   };
 
   enableParallelBuilding = true;
